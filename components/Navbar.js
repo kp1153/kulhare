@@ -39,7 +39,7 @@ export default function Navbar() {
             href="/"
             className="text-white text-2xl font-bold hover:text-amber-200 transition-colors"
           >
-            कुल्हारे प्रकाशन
+           मेधा बुक्स, शाहदरा
           </Link>
 
           {/* Navigation Links + Cart */}

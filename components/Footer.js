@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Column 1: Publisher Info */}
         <div>
-          <h4 className="text-xl font-bold">कुल्हारे प्रकाशन</h4>
+          <h4 className="text-xl font-bold">मेधाबुक्स, शाहदरा</h4>
           <p className="mt-3 text-sm">कथाकारों की आवाज़ — समाज की परछाइयाँ</p>
         </div>
 

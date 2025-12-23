@@ -1,5 +1,4 @@
 import { client } from "@/sanity/client";
-import AddToCartButton from "@/components/AddToCartButton";
 import { notFound } from "next/navigation";
 
 async function getBookBySlug(slug) {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Search, Filter, Grid, List } from "lucide-react";
-import AddToCartButton from "../../components/AddToCartButton";
+
 import { client } from "../../sanity/client";
 
 export default function BooksPage() {

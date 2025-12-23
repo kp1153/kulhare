@@ -84,8 +84,13 @@ export default async function HomePage() {
                       </span>
                     )}
 
-                    {/* Add to Cart Button */}
-                    <AddToCartButton book={book} className="w-full" />
+                    {/* Contact Button */}
+                    <a
+                      href="tel:9891022477"
+                      className="block w-full bg-orange-600 hover:bg-orange-700 text-white text-center px-4 py-2 rounded-lg font-semibold transition-colors"
+                    >
+                      संपर्क करें
+                    </a>
                   </div>
                 </div>
               ))

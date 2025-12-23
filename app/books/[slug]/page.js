@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { client } from "../../../sanity/client";
 import Link from "next/link";
-import { ArrowLeft, Star, Share2 } from "lucide-react";
+import { ArrowLeft, Share2 } from "lucide-react";
 
 // Get single book by slug
 async function getBook(slug) {
@@ -131,7 +131,12 @@ export default async function BookDetailPage({ params }) {
               )}
 
               <div className="flex gap-4">
-                <AddToCartButton book={book} className="flex-1" />
+                <a
+                  href="tel:9891022477"
+                  className="flex-1 bg-orange-600 hover:bg-orange-700 text-white text-center px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  संपर्क करें
+                </a>
                 <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                   <Share2 size={20} />
                 </button>
@@ -282,7 +287,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${book.title} - कुल्हारे प्रकाशन`,
+    title: `${book.title} - मेधा बुक्स`,
     description: book.description || `${book.title} by ${book.author}`,
     openGraph: {
       title: book.title,

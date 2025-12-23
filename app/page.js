@@ -1,5 +1,4 @@
 import HeroSection from "../components/HeroSection";
-import AddToCartButton from "../components/AddToCartButton";
 import { client } from "../sanity/client";
 import Link from "next/link";
 

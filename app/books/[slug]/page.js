@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { client } from "../../../sanity/client";
-import AddToCartButton from "../../../components/AddToCartButton";
 import Link from "next/link";
 import { ArrowLeft, Star, Share2 } from "lucide-react";
 

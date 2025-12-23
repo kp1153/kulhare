@@ -1,79 +1,58 @@
+import { Facebook } from "lucide-react";
+
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-900 text-gray-200 mt-10">
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Column 1: Publisher Info */}
-        <div>
-          <h4 className="text-xl font-bold">मेधाबुक्स, शाहदरा</h4>
-          <p className="mt-3 text-sm">कथाकारों की आवाज़ — समाज की परछाइयाँ</p>
+    <footer className="bg-[#006680] text-white mt-10">
+      <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm space-y-2">
+
+        <div className="font-semibold text-lg">
+          मेधा बुक्स, शाहदरा
         </div>
 
-        {/* Column 2: Readers Section */}
-        <div>
-          <h4 className="text-lg font-semibold">रीडर्स</h4>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <a href="/new" className="hover:text-amber-400">
-                नई पुस्तकें
-              </a>
-            </li>
-            <li>
-              <a href="/popular" className="hover:text-amber-400">
-                लोकप्रिय पुस्तकें
-              </a>
-            </li>
-            <li>
-              <a href="/ebooks" className="hover:text-amber-400">
-                ई-पुस्तकें
-              </a>
-            </li>
-            <li>
-              <a href="/magazine" className="hover:text-amber-400">
-                पत्रिका
-              </a>
-            </li>
-          </ul>
+        <div className="text-white/90">
+          X-11 / Near Shiv Mandir, Mohan Park, Shahdara, Delhi-110032
         </div>
 
-        {/* Column 3: Institutional Links */}
         <div>
-          <h4 className="text-lg font-semibold">लिंक्स</h4>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <a href="/about" className="hover:text-amber-400">
-                हमारे बारे में
-              </a>
-            </li>
-            <li>
-              <a href="/team" className="hover:text-amber-400">
-                संपादकीय टीम
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" className="hover:text-amber-400">
-                गोपनीयता नीति
-              </a>
-            </li>
-            <li>
-              <a href="/terms" className="hover:text-amber-400">
-                नियम व शर्तें
-              </a>
-            </li>
-          </ul>
+          <a href="tel:9891022477" className="hover:text-gray-200 transition">
+            98910 22477
+          </a>
+          {" | "}
+          <a
+            href="mailto:medhabooks@gmail.com"
+            className="hover:text-gray-200 transition"
+          >
+            medhabooks@gmail.com
+          </a>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700 py-4 text-center text-sm">
-        © 2025 कुल्हारे प्रकाशन | Developed by{" "}
-        <a
-          href="https://www.web-developer-kp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-amber-400"
-        >
-          Web Developer KP
-        </a>
+        <div className="flex justify-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=100089726817350"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-gray-200 transition"
+            aria-label="Facebook"
+          >
+            <Facebook size={16} />
+            <span>Facebook</span>
+          </a>
+        </div>
+
+        <div className="pt-2 border-t border-white/20">
+          <span>© {year} सर्वाधिकार सुरक्षित | Passionately created by </span>
+          <a
+            href="https://www.web-developer-kp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-300 hover:underline"
+          >
+            web-developer-kp.com
+          </a>
+        </div>
+
       </div>
     </footer>
   );

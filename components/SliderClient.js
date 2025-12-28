@@ -31,44 +31,40 @@ export default function SliderClient({ publications }) {
         </h2>
         
         <div className="relative w-full">
-          <div className="flex items-center justify-center gap-4 md:gap-6 w-full">
+          <div className="flex items-center justify-center gap-6 w-full">
             <button
               onClick={prevSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0 z-10"
+              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0"
               aria-label="पिछला"
             >
               <ChevronLeft className="text-white" size={32} />
             </button>
 
-            <div className="flex-1 max-w-6xl mx-auto">
+            <div className="flex-1 max-w-4xl">
               {publications.map((book, index) => (
                 <div
                   key={book.id}
-                  className={`transition-all duration-500 ${
-                    index === currentIndex ? "block" : "hidden"
-                  }`}
+                  className={`${index === currentIndex ? "block" : "hidden"}`}
                 >
                   <Link href={`/book/${book.slug}`}>
-                    <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8 hover:shadow-3xl transition">
+                    <div className="text-center">
                       <div className="relative w-full h-[600px] md:h-[700px] mb-6">
                         <Image
                           src={book.cover}
                           alt={book.title}
                           fill
-                          className="object-contain"
+                          className="object-contain drop-shadow-2xl"
                         />
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-[#006680] mb-3 text-center">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                         {book.title}
                       </h3>
-                      <p className="text-gray-700 text-lg md:text-xl mb-3 text-center">
+                      <p className="text-white/90 text-lg md:text-xl mb-3">
                         {book.author}
                       </p>
-                      <div className="text-center">
-                        <span className="inline-block bg-[#006680] text-white text-base md:text-lg px-6 py-3 rounded-full font-semibold">
-                          ₹{book.price}
-                        </span>
-                      </div>
+                      <span className="inline-block bg-white text-[#006680] text-lg px-6 py-3 rounded-full font-bold">
+                        ₹{book.price}
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -77,7 +73,7 @@ export default function SliderClient({ publications }) {
 
             <button
               onClick={nextSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0 z-10"
+              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0"
               aria-label="अगला"
             >
               <ChevronRight className="text-white" size={32} />

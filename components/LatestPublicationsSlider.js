@@ -1,8 +1,31 @@
 // components/LatestPublicationsSlider.js
-export default function LatestPublicationsSlider() {
-  return (
-    <div className="bg-[#006680] text-white py-8 text-center">
-      <h2 className="text-2xl font-bold">नवीनतम प्रकाशन (जल्द आ रहा है)</h2>
-    </div>
-  );
+import { client, urlFor } from "@/lib/sanity";
+import SliderClient from "./SliderClient";
+
+async function getLatestBooks() {
+  const query = `*[_type == "book"] | order(_createdAt desc)[0...4] {
+    _id,
+    title,
+    author,
+    coverImage,
+    slug,
+    price
+  }`;
+  
+  const books = await client.fetch(query);
+  
+  return books.map((book) => ({
+    id: book._id,
+    title: book.title,
+    author: book.author,
+    cover: urlFor(book.coverImage).width(400).height(600).url(),
+    slug: book.slug.current,
+    price: book.price
+  }));
+}
+
+export default async function LatestPublicationsSlider() {
+  const publications = await getLatestBooks();
+  
+  return <SliderClient publications={publications} />;
 }

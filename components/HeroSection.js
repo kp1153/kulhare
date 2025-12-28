@@ -1,57 +1,54 @@
+// components/HeroSection.js
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-r from-orange-50 to-amber-50 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              मेधा बुक्स, शाहदरा
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              हिंदी साहित्य का भंडार
-            </p>
-            <p className="text-lg text-gray-500 mb-10 leading-relaxed">
-              उच्च गुणवत्ता की पुस्तकों के साथ, हम भारतीय संस्कृति और साहित्य को
-              आगे बढ़ाने में योगदान देते हैं।
-            </p>
+    <section className="bg-gradient-to-b from-white to-gray-50 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-[#006680] mb-6">
+          हिंदी साहित्य का डिजिटल खजाना
+        </h1>
+        
+        <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          चर्चित लेखकों के साथ-साथ युवा प्रतिभाओं को भी मिलता है मंच। 
+          पढ़ें उपन्यास, कविता, कहानी और आलोचना - सब एक जगह।
+        </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/books"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                पुस्तकें देखें
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                संपर्क करें
-              </Link>
-            </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Link
+            href="/novels"
+            className="bg-[#006680] hover:bg-[#005570] text-white px-8 py-4 rounded-lg text-lg font-semibold transition shadow-lg hover:shadow-xl w-full sm:w-auto"
+          >
+            उपन्यास पढ़ें
+          </Link>
+          
+          <Link
+            href="/rachna-bheje"
+            className="bg-white hover:bg-gray-50 text-[#006680] border-2 border-[#006680] px-8 py-4 rounded-lg text-lg font-semibold transition shadow-lg hover:shadow-xl w-full sm:w-auto"
+          >
+            अपनी रचना भेजें
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl font-bold text-[#006680] mb-2">५००+</div>
+            <div className="text-gray-600">रचनाएं</div>
           </div>
-
-          {/* Right Image */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8">
-              <img
-                src="/api/placeholder/400/500"
-                alt="हिंदी पुस्तकें"
-                className="w-full h-96 object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
-              1000+ पुस्तकें
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-amber-500 text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
-              विश्वसनीय प्रकाशन
-            </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl font-bold text-[#006680] mb-2">१००+</div>
+            <div className="text-gray-600">लेखक</div>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl font-bold text-[#006680] mb-2">निःशुल्क</div>
+            <div className="text-gray-600">पढ़ें</div>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl font-bold text-[#006680] mb-2">साप्ताहिक</div>
+            <div className="text-gray-600">नई सामग्री</div>
           </div>
         </div>
       </div>

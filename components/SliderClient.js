@@ -30,27 +30,27 @@ export default function SliderClient({ publications }) {
           नवीनतम प्रकाशन
         </h2>
         
-        <div className="relative">
-          <div className="flex items-center justify-center gap-4 md:gap-8">
+        <div className="relative w-full">
+          <div className="flex items-center justify-center gap-4 md:gap-8 w-full">
             <button
               onClick={prevSlide}
-              className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition"
+              className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition flex-shrink-0"
               aria-label="पिछला"
             >
               <ChevronLeft className="text-white" size={24} />
             </button>
 
-            <div className="flex gap-4 overflow-hidden max-w-4xl">
+            <div className="flex gap-4 overflow-hidden w-full max-w-md mx-auto">
               {publications.map((book, index) => (
                 <div
                   key={book.id}
-                  className={`transition-all duration-500 ${
+                  className={`transition-all duration-500 w-full ${
                     index === currentIndex ? "block" : "hidden"
                   }`}
                 >
                   <Link href={`/book/${book.slug}`}>
-                    <div className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition w-64 md:w-80">
-                      <div className="relative h-80 md:h-96 mb-4">
+                    <div className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition w-full">
+                      <div className="relative h-96 mb-4 w-full">
                         <Image
                           src={book.cover}
                           alt={book.title}
@@ -75,7 +75,7 @@ export default function SliderClient({ publications }) {
 
             <button
               onClick={nextSlide}
-              className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition"
+              className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition flex-shrink-0"
               aria-label="अगला"
             >
               <ChevronRight className="text-white" size={24} />

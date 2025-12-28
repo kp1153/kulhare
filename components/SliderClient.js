@@ -31,42 +31,44 @@ export default function SliderClient({ publications }) {
         </h2>
         
         <div className="relative w-full">
-          <div className="flex items-center justify-center gap-6 md:gap-8 w-full">
+          <div className="flex items-center justify-center gap-4 md:gap-6 w-full">
             <button
               onClick={prevSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0"
+              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0 z-10"
               aria-label="पिछला"
             >
               <ChevronLeft className="text-white" size={32} />
             </button>
 
-            <div className="flex gap-4 overflow-hidden w-full max-w-2xl mx-auto">
+            <div className="flex-1 max-w-6xl mx-auto">
               {publications.map((book, index) => (
                 <div
                   key={book.id}
-                  className={`transition-all duration-500 w-full ${
+                  className={`transition-all duration-500 ${
                     index === currentIndex ? "block" : "hidden"
                   }`}
                 >
                   <Link href={`/book/${book.slug}`}>
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition w-full">
-                      <div className="relative h-[500px] md:h-[600px] mb-4 w-full">
+                    <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8 hover:shadow-3xl transition">
+                      <div className="relative w-full h-[600px] md:h-[700px] mb-6">
                         <Image
                           src={book.cover}
                           alt={book.title}
                           fill
-                          className="object-contain rounded"
+                          className="object-contain"
                         />
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-[#006680] mb-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#006680] mb-3 text-center">
                         {book.title}
                       </h3>
-                      <p className="text-gray-600 text-base md:text-lg mb-2">
+                      <p className="text-gray-700 text-lg md:text-xl mb-3 text-center">
                         {book.author}
                       </p>
-                      <span className="inline-block bg-[#006680] text-white text-sm md:text-base px-4 py-2 rounded-full">
-                        ₹{book.price}
-                      </span>
+                      <div className="text-center">
+                        <span className="inline-block bg-[#006680] text-white text-base md:text-lg px-6 py-3 rounded-full font-semibold">
+                          ₹{book.price}
+                        </span>
+                      </div>
                     </div>
                   </Link>
                 </div>
@@ -75,20 +77,20 @@ export default function SliderClient({ publications }) {
 
             <button
               onClick={nextSlide}
-              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0"
+              className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition flex-shrink-0 z-10"
               aria-label="अगला"
             >
               <ChevronRight className="text-white" size={32} />
             </button>
           </div>
 
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-3 mt-8">
             {publications.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition ${
-                  index === currentIndex ? "bg-white w-10" : "bg-white/40"
+                className={`h-3 rounded-full transition-all ${
+                  index === currentIndex ? "bg-white w-12" : "bg-white/40 w-3"
                 }`}
                 aria-label={`स्लाइड ${index + 1}`}
               />

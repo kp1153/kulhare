@@ -16,6 +16,7 @@ export default function Navbar() {
     { href: "/criticism", label: "आलोचना" },
     { href: "/new-releases", label: "नए प्रकाशन" },
     { href: "/anuvad", label: "अनुवाद" },
+    { href: "/vividh", label: "विविध" },
   ];
 
   return (

@@ -15,7 +15,7 @@ export default function Navbar() {
     { href: "/stories", label: "कहानी" },
     { href: "/criticism", label: "आलोचना" },
     { href: "/new-releases", label: "नए प्रकाशन" },
-    { href: "/rachna-bheje", label: "रचना भेजें" },
+    { href: "/anuvad", label: "अनुवाद" },
   ];
 
   return (
@@ -37,9 +37,9 @@ export default function Navbar() {
                 मेधा बुक्स
               </h1>
             </div>
-            <p className="text-xs md:text-sm text-white/90 italic px-2">
-              चर्चित के साथ युवा लेखकों को भी प्रदान किया जाता है मंच
-            </p>
+           <p className="text-base md:text-lg font-bold text-white/90 italic px-2">
+  कालजयी के साथ समकालीन लेखकों को भी दिया गया है भरपूर मौका
+</p>
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}

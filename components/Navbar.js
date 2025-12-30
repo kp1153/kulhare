@@ -35,12 +35,9 @@ export default function Navbar() {
                 />
               </div>
               <h1 className="text-2xl md:text-3xl font-bold">
-                मेधा बुक्स
+                मेधा बुक्स 
               </h1>
-            </div>
-           <p className="text-base md:text-lg font-bold text-white/90 italic px-2">
-  कालजयी के साथ समकालीन लेखकों को भी दिया गया है भरपूर मौका
-</p>
+            </div>  
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
